@@ -1,0 +1,10 @@
+trade_id,issue,severity,reason
+T003,Missing Owner,Medium,No individual has been assigned responsibility for investigating or resolving the trade.
+T002,Duplicate Trade ID,High,Duplicate records may result in incorrect reporting or processing.
+T002,Failed Trade,High,The trade has not completed successfully and requires investigation.
+T005,Failed Trade,High,The trade has not completed successfully and requires investigation.
+T002,Overdue Trade,High,The settlement date has passed and the trade remains unresolved.
+T003,Overdue Trade,High,The settlement date has passed and the trade remains unresolved.
+T005,Overdue Trade,High,The settlement date has passed and the trade remains unresolved.
+T002,High Priority Failed Trade,Critical,A high-priority trade has failed and requires immediate attention.
+T005,High Priority Failed Trade,Critical,A high-priority trade has failed and requires immediate attention.

@@ -1,0 +1,7 @@
+trade_id,client_name,status,settlement_date,issue_type,owner,priority
+T001, Barclays ,completed,2026-05-20,None,Aisha,low
+T002,HSBC, FAILED ,2026-05-18,Missing confirmation,James,HIGH
+T003,Citi,pending,2026-05-21,Price mismatch,,Medium
+T004,JPMorgan,Completed,2026-05-19,None,Sarah,Low
+T005,Goldman Sachs,Failed ,2026-05-17,Duplicate trade,Michael,High
+T002,HSBC, FAILED ,2026-05-18,Missing confirmation,James,HIGH

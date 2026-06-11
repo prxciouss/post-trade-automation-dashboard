@@ -1,0 +1,15 @@
+
+Post Trade Operational Summary
+
+A total of 5 clean trades were reviewed.
+
+2 trades have failed.
+3 trades are overdue.
+2 high-priority trades have failed.
+1 trades are missing an owner.
+
+Recommended actions:
+- Investigate failed trades immediately.
+- Prioritise high-priority failed trades.
+- Assign owners to trades with missing ownership.
+- Review overdue trades to reduce settlement risk.
