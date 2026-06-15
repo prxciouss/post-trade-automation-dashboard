@@ -10,9 +10,9 @@
 # 4 XD. Validate data - identify operational issues such as missing owners, duplicate trade IDs, failed trades, and overdue settlements.
 # 5 XD. Analyse data - filter the data to find key groups such as failed, pending, high-priority, and unresolved trades.
 # 6 XD. Generate KPIs (Key Performance Indicator) - calculate summary metrics such as total trades, failure rates, completion rates, overdue items, and issue frequency.
-# 7 X. Build dashboard - display KPIs, charts, tables, warnings, and trends in an interactive Streamlit dashboard.
-# 8 X. Export reports - generate cleaned datasets, validation reports, and KPI summaries as downloadable Excel files.
-# 9. Generate AI summaries - produce plain-English operational summaries highlighting key risks, trends, and recommended actions.
+# 7 XD. Build dashboard - display KPIs, charts, tables, warnings, and trends in an interactive Streamlit dashboard.
+# 8 XD. Export reports - generate cleaned datasets, validation reports, and KPI summaries as downloadable Excel files.
+# 9 XD. Generate AI summaries - produce plain-English operational summaries highlighting key risks, trends, and recommended actions.
 
 # Libraries expected to be used in this project:  
     #Pandas -> handles spreadsheets/data tables
@@ -22,6 +22,7 @@
 
 #Libraries ############################################################################################################################################################
 import pandas as pd
+from ollama import chat
     # nicknames panda -> pd
 
 #Functions ######################################################################################
@@ -274,23 +275,31 @@ print("Failure rate:", round(failure_rate, 2), "%")
 print("Overdue rate:", round(overdue_rate, 2), "%")
 print("High priority failure rate:", round(high_priority_failure_rate, 2), "%")
 
-# AI-style operational summary
-operational_summary = f"""
-Post Trade Operational Summary
+prompt = f"""
+You are a post-trade operations analyst.
 
-A total of {clean_total_trades} clean trades were reviewed.
+Analyse the following metrics and write a concise operational summary.
 
-{number_of_failed_trades} trades have failed.
-{number_of_overdue_trades} trades are overdue.
-{number_of_high_priority_failed_trades} high-priority trades have failed.
-{number_of_missing_owners} trades are missing an owner.
+Clean trades reviewed: {clean_total_trades}
+Failed trades: {number_of_failed_trades}
+Overdue trades: {number_of_overdue_trades}
+High-priority failed trades: {number_of_high_priority_failed_trades}
+Missing owners: {number_of_missing_owners}
 
-Recommended actions:
-- Investigate failed trades immediately.
-- Prioritise high-priority failed trades.
-- Assign owners to trades with missing ownership.
-- Review overdue trades to reduce settlement risk.
+Include:
+- Key operational risks
+- Recommended actions
+- Professional business language
 """
+
+response = chat(
+    model="llama3.2",
+    messages=[
+        {"role": "user", "content": prompt}
+    ]
+)
+
+operational_summary = response.message.content
 
 print("\nOPERATIONAL SUMMARY")
 print(operational_summary)
