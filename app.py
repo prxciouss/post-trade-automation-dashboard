@@ -10,9 +10,9 @@ identifies operational issues,
 tracks KPIs and generates operational summaries.
 """)
 
-kpi_summary_df = pd.read_csv("kpi_summary.csv")
-validation_report_df = pd.read_csv("validation_report.csv")
-clean_df = pd.read_csv("clean_trades.csv")
+kpi_summary_df = pd.read_csv("Reports/CSV/kpi_summary.csv")
+validation_report_df = pd.read_csv("Reports/CSV/validation_report.csv")
+clean_df = pd.read_csv("Reports/CSV/clean_trades.csv")
 
 st.subheader("KPI Summary")
 

@@ -292,6 +292,7 @@ Include:
 - Professional business language
 """
 
+# Generate AI operational summary using Ollama
 response = chat(
     model="llama3.2",
     messages=[
