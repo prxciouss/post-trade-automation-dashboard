@@ -2,12 +2,17 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title("Post Trade Automation Dashboard")
+st.set_page_config(
+    page_title="Post Trade Automation Dashboard",
+    layout="wide"
+)
+
+st.title("Post-Trade Automation Dashboard")
 
 st.write("""
-This dashboard analyses post-trade data,
-identifies operational issues,
-tracks KPIs and generates operational summaries.
+This dashboard automates post-trade monitoring by 
+validating trade data, identifying operational issues, 
+calculating KPIs and generating AI-powered operational summaries.
 """)
 
 kpi_summary_df = pd.read_csv("Reports/CSV/kpi_summary.csv")
@@ -28,13 +33,21 @@ with col2:
 
 status_counts = clean_df["status"].value_counts()
 
+status_counts = clean_df["status"].value_counts()
+
 fig = px.pie(
-values=status_counts.values,
-names=status_counts.index,
-title="Trade Status Distribution"
+    values=status_counts.values,
+    names=status_counts.index,
+    title="Trade Status Distribution",
+    color=status_counts.index,
+    color_discrete_map={
+        "Completed": "#2E86DE",
+        "Failed": "#E74C3C",
+        "Pending": "#F39C12"
+    }
 )
 
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("Validation Report")
 st.dataframe(validation_report_df, use_container_width=True)

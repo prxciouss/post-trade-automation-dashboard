@@ -17,6 +17,20 @@ The project also integrates a local Large Language Model (LLM) using Ollama and 
 * Visualise data through a Streamlit dashboard
 * Generate AI-powered operational summaries using Llama 3.2
 
+## Dashboard Preview
+
+### KPI Dashboard
+
+![Dashboard Overview](Screenshots/dashboard_overview.png)
+
+### Validation Reporting
+
+![Validation Report](Screenshots/validation_report.png)
+
+### AI Operational Summary
+
+![AI Summary](Screenshots/ai_summary.png)
+
 ## Technologies Used
 
 * Python
@@ -51,7 +65,7 @@ The application automatically identifies:
 
 Install required libraries:
 
-pip install pandas streamlit plotly openpyxl ollama
+pip install -r requirements.txt
 
 Run the data processing script:
 
