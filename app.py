@@ -44,7 +44,7 @@ st.dataframe(clean_df, use_container_width=True)
 
 st.subheader("AI Operational Summary")
 
-with open("operational_summary.txt", "r") as file:
+with open("Reports/operational_summary.txt", "r") as file:
     operational_summary = file.read()
 
 st.write(operational_summary)

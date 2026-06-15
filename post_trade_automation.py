@@ -198,7 +198,7 @@ print("\nVALIDATION REPORT \nNumber of issues:", len(validation_report_df))
 print(validation_report_df)
 
 validation_report_df.to_csv(
-    "validation_report.csv",
+    "Reports/CSV/validation_report.csv",
     index=False
 )
 
@@ -246,14 +246,12 @@ print("\nKPI DATAFRAME")
 print(kpi_summary_df)
 
 kpi_summary_df.to_csv(
-    "kpi_summary.csv",
+    "Reports/CSV/kpi_summary.csv",
     index=False
 )
 
-print("\nKPI summary exported successfully.")
-
 clean_df.to_csv(
-    "clean_trades.csv",
+    "Reports/CSV/clean_trades.csv",
     index=False
 )
 
@@ -305,7 +303,7 @@ operational_summary = response.message.content
 print("\nOPERATIONAL SUMMARY")
 print(operational_summary)
 
-with open("operational_summary.txt", "w") as file:
+with open("Reports/operational_summary.txt", "w") as file:
     file.write(operational_summary)
 
 print("\nOperational summary exported successfully.")
@@ -313,17 +311,17 @@ print("\nOperational summary exported successfully.")
 # Excel exports
 
 clean_df.to_excel(
-    "clean_trades.xlsx",
+    "Reports/Excel/clean_trades.xlsx",
     index=False
 )
 
 validation_report_df.to_excel(
-    "validation_report.xlsx",
+    "Reports/Excel/validation_report.xlsx",
     index=False
 )
 
 kpi_summary_df.to_excel(
-    "kpi_summary.xlsx",
+    "Reports/Excel/kpi_summary.xlsx",
     index=False
 )
 
