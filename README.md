@@ -81,10 +81,3 @@ streamlit run app.py
 * KPI Summary
 * Clean Trades Dataset
 * AI Operational Summary
-
-## Future Improvements
-
-* Support Excel file uploads through the dashboard
-* Additional KPI metrics and visualisations
-* Enhanced AI risk analysis and recommendations
-* Historical trend monitoring
