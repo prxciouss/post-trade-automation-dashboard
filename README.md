@@ -2,7 +2,7 @@
 
 A Python application that models a simplified post-trade operations workflow: it simulates a trade blotter priced from **real historical market data**, tracks each trade through a 5-stage settlement lifecycle, runs automated validation and risk checks, calculates both count-based and value-based (notional) exposure metrics, and generates an AI-powered operational summary using a locally hosted LLM — all surfaced through an interactive Streamlit dashboard.
 
-Built as a personal project to explore how quantitative analysis and technology are used to understand risk and inform decision-making in post-trade operations, ahead of a Goldman Sachs Women in Trading Academy application.
+Built as a personal project to explore how quantitative analysis and technology are used to understand risk and inform decision-making in post-trade operations
 
 ## Dashboard Preview
 
