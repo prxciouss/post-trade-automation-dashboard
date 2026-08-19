@@ -1,0 +1,11 @@
+# Generated data & reports - reproducible by running the pipeline scripts,
+# so there's no need to commit them (and they'd just go stale/get out of sync)
+Data/
+Reports/
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
